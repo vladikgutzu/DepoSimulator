@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6ab306d3404124788b4e0f5648b0e8, type: 3}
+  m_Name: weapon_bat
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeWeaponDefinition
+  Kind: 1
+  DisplayName: Bat
+  PickupHint: "Left click to swing \u2014 long reach, two hits to put a raider down"
+  Damage: 2
+  Reach: 2.4
+  HalfAngle: 65
+  Cooldown: 0.8
+  Windup: 0.34
+  Trauma: 0.25
+  Grip: 2
+  OffHandGrip: {x: -0.13599974, y: -0.20700005, z: 0.02799986}
+  HandOffset: {x: 0.097, y: 0.032, z: 0.084}
+  HandRotation: {x: 337.77686, y: 101.01006, z: 82.58762}
+  CarryOffset: {x: 0.135, y: -0.07, z: 0.222}
+  CarryRotation: {x: 350.83978, y: 159.21486, z: 190.55705}
+  Prefab: {fileID: 517457083925508102, guid: c728c7f27703c664f99550b25276346b, type: 3}

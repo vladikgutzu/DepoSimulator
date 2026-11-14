@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_tool_set_battery
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Tool Battery
+  PartID: tool_set_battery
+  Description: Rechargeable battery for powered tools.
+  VisualPrefab: {fileID: 2920035209984151487, guid: 0297b2bcbd4afaa44aeaab772ba15a3f, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.95, g: 0.55, b: 0.1, a: 1}
+  IsHeavy: 0
+  GhostChildPaths:
+  - $all

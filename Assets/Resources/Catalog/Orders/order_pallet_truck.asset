@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_pallet_truck
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  IsEnabled: 1
+  OrderName: Pallet Truck
+  ClientName: LiftWorks
+  Description: A manual hydraulic pallet truck.
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: 68f45b237955a1c45bb56eed65f13280, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: b708344ca07910243a99c7b4597b1222, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: e816e4bbe2e74d042999d1050032ca63, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: a05b71950125b4049b1ebf9552446578, type: 2}
+    Count: 2
+    AssemblyStage: 2
+  Reward: 380
+  TimeLimitSeconds: 420
+  SharedGhostPrefab: {fileID: 4819924589712967592, guid: 56581d1dfc9fc6d4ba2892e66349a263, type: 3}

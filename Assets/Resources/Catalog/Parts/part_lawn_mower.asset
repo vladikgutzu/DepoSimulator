@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_lawn_mower
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Lawn Mower
+  PartID: lawn_mower
+  Description: Heavy garden equipment packed for retail delivery.
+  VisualPrefab: {fileID: 4371287676655753118, guid: 41315eab524b7794d933dc6fa7926842, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.25, g: 0.75, b: 0.25, a: 1}
+  IsHeavy: 1
+  GhostChildPaths: []

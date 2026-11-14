@@ -1,0 +1,99 @@
+version: 1
+
+state_ownership:
+  - id: shared_gameplay_state
+    owner: authoritative_server
+    adr: ADR-0001
+    status: accepted
+    notes: All consequential multiplayer state is validated and written by the server.
+
+  - id: shared_physics
+    owner: authoritative_server
+    adr: ADR-0001
+    status: accepted
+    notes: Gameplay collisions and shared Rigidbody simulation run only on the server.
+
+  - id: client_input_and_presentation
+    owner: owning_client
+    adr: ADR-0001
+    status: accepted
+    notes: Clients own input sampling, camera, HUD, audio, cosmetics, and reversible anticipation.
+
+interfaces:
+  - id: discrete_gameplay_command
+    adr: ADR-0001
+    status: accepted
+    contract: Server resolves the actor from RpcParams, validates expectedVersion and operationId, and commits atomically.
+
+  - id: command_result
+    adr: ADR-0001
+    status: accepted
+    contract: Result contains operationId, accepted, rejectionReason, authoritativeVersion, and rollback state when required.
+
+  - id: continuous_movement_input
+    adr: ADR-0001
+    status: accepted
+    contract: Unreliable sequenced input with redundancy; server acknowledges the last processed sequence.
+
+  - id: authoritative_movement_snapshot
+    adr: ADR-0001
+    status: accepted
+    contract: Server tick, acknowledged input sequence, pose, velocity, and motor state drive reconciliation.
+
+forbidden_patterns:
+  - id: client_authoritative_shared_state
+    adr: ADR-0001
+    status: forbidden
+    reason: Shared gameplay outcomes must have one authoritative result.
+
+  - id: parallel_local_gameplay_objects
+    adr: ADR-0001
+    status: forbidden
+    reason: Independently instantiated local copies cannot provide authoritative physics or late-join state.
+
+  - id: persistent_state_via_one_shot_rpc
+    adr: ADR-0001
+    status: forbidden
+    reason: RPC history is unavailable to late-joining clients.
+
+  - id: client_gameplay_collision_mutation
+    adr: ADR-0001
+    status: forbidden
+    reason: Client collision callbacks are cosmetic and cannot mutate shared state.
+
+  - id: nested_network_objects
+    adr: ADR-0001
+    status: forbidden
+    reason: Runtime cargo remains independently spawned and references its container.
+
+api_decisions:
+  - id: ngo_universal_rpc
+    adr: ADR-0001
+    status: accepted
+    decision: New network commands use NGO universal Rpc attributes and RpcParams sender identity.
+
+  - id: live_entity_reference
+    adr: ADR-0001
+    status: accepted
+    decision: Live runtime relationships use NetworkObjectReference; stable IDs identify definitions and scene content only.
+
+  - id: persistent_runtime_entities
+    adr: ADR-0001
+    status: accepted
+    decision: Independently interactive runtime entities use pooled server-spawned NetworkObjects or sharded authoritative manifests.
+
+performance_budgets:
+  - id: network_tick_rate
+    adr: ADR-0001
+    status: accepted
+    value: 30 Hz
+
+  - id: active_snapshot_target
+    adr: ADR-0001
+    status: accepted
+    value: At most 20 Hz where appropriate; resting, held, and contained entities do not stream continuously.
+
+  - id: owner_reconciliation_target
+    adr: ADR-0001
+    status: accepted
+    value: p95 correction no greater than 5 cm and 2 degrees under 150 ms RTT, 40 ms jitter, and 5 percent packet loss.

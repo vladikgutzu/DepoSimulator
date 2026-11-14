@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_tool_set_tools
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Maintenance Tools
+  PartID: tool_set_tools
+  Description: Organized warehouse maintenance tools.
+  VisualPrefab: {fileID: 3660414260501583962, guid: 992137564b6251c45a417fb70a0fd47d, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.82, g: 0.35, b: 0.12, a: 1}
+  IsHeavy: 0
+  GhostChildPaths:
+  - $none

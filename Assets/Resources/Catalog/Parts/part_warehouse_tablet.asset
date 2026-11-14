@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_warehouse_tablet
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Tablet Body
+  PartID: warehouse_tablet_body
+  Description: Rugged warehouse tablet computer.
+  VisualPrefab: {fileID: 6172976890236493297, guid: 49865e106a2efd043931b0fe4f0caada, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.12, g: 0.16, b: 0.2, a: 1}
+  IsHeavy: 0
+  GhostChildPaths:
+  - $none

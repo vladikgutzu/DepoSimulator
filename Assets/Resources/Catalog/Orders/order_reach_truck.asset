@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_reach_truck
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  IsEnabled: 1
+  OrderName: Reach Truck
+  ClientName: Warehouse Mobility
+  Description: A warehouse reach truck for high-rack operations.
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: 0107128c94ab31649ae7e8ee8e202017, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: 5ad8071ccfd233540a19116c35e7b157, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 25499a92f1f36cb4092622f875a17c20, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 8e8ccc54684770f44982c5bb7bcea175, type: 2}
+    Count: 1
+    AssemblyStage: 2
+  Reward: 550
+  TimeLimitSeconds: 480
+  SharedGhostPrefab: {fileID: 2255277575842101230, guid: b266f37358f4bcc488e1f508ec8e9c17, type: 3}

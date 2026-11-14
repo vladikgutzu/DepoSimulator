@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_hand_scanner
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  IsEnabled: 1
+  OrderName: Hand Scanner
+  ClientName: LogiScan
+  Description: A handheld warehouse scanner.
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: 58f3f9fdc0c80d54e96b356abcb7663e, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: 2068bd036a20632499318086c69eb471, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 2ae45e218226ec84e9909ff56e4abf99, type: 2}
+    Count: 1
+    AssemblyStage: 2
+  Reward: 180
+  TimeLimitSeconds: 300
+  SharedGhostPrefab: {fileID: 1160667174638075342, guid: ef6ff02a9387d124c806c7b6283a01b4, type: 3}

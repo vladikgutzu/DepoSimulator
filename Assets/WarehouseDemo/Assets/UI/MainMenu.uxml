@@ -1,0 +1,238 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="menu-root" class="menu-root">
+        <Style src="MainMenu.uss" />
+
+        <!-- ═══════════════ MAIN CARD ═══════════════ -->
+        <ui:VisualElement name="main-card" class="menu-card">
+
+            <!-- Logo -->
+            <ui:VisualElement class="logo-block">
+                <ui:VisualElement class="brand-logo brand-logo--menu" />
+                <ui:Label class="demo-badge" text="DEMO" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="career-strip">
+                <ui:VisualElement class="career-level-badge">
+                    <ui:Label name="career-level" class="career-level" text="LV 1" />
+                </ui:VisualElement>
+                <ui:VisualElement class="career-copy">
+                    <ui:Label name="career-title" class="career-title" text="TRAINEE" />
+                    <ui:Label name="career-progress" class="career-progress" text="0 / 125 REP" />
+                </ui:VisualElement>
+                <ui:VisualElement class="career-stats">
+                    <ui:Label name="career-orders" class="career-orders" text="0 ORDERS" />
+                    <ui:Label name="career-best" class="career-best" text="0 S • BEST —" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="card-divider" />
+
+            <!-- Singleplayer -->
+            <ui:Button name="btn-singleplayer" class="menu-btn menu-btn--primary">
+                <ui:VisualElement class="menu-btn__left">
+                    <ui:Label class="menu-btn__title" text="SINGLE PLAYER" />
+                    <ui:Label class="menu-btn__sub" text="Offline · demo mode" />
+                </ui:VisualElement>
+                <ui:Label class="menu-btn__arrow" text="›" />
+            </ui:Button>
+
+            <!-- Multiplayer -->
+            <ui:Button name="btn-multiplayer" class="menu-btn menu-btn--multi">
+                <ui:VisualElement class="menu-btn__left">
+                    <ui:Label class="menu-btn__title" text="MULTIPLAYER" />
+                    <ui:Label class="menu-btn__sub" text="Up to 4 players · voice chat · roles" />
+                </ui:VisualElement>
+                <ui:Label class="menu-btn__arrow" text="›" />
+            </ui:Button>
+
+            <!-- Settings -->
+            <ui:Button name="btn-settings" class="menu-btn">
+                <ui:VisualElement class="menu-btn__left">
+                    <ui:Label class="menu-btn__title" text="SETTINGS" />
+                    <ui:Label class="menu-btn__sub" text="Audio, controls and input preferences" />
+                </ui:VisualElement>
+                <ui:Label class="menu-btn__arrow" text="›" />
+            </ui:Button>
+
+            <ui:Button name="btn-wishlist" class="menu-btn menu-btn--wishlist">
+                <ui:VisualElement class="menu-btn__left">
+                    <ui:Label class="menu-btn__title" text="WISHLIST ON STEAM" />
+                    <ui:Label class="menu-btn__sub" text="Follow the full version" />
+                </ui:VisualElement>
+                <ui:Label class="menu-btn__arrow" text="↗" />
+            </ui:Button>
+
+            <!-- Exit -->
+            <ui:Button name="btn-exit" class="menu-btn menu-btn--exit">
+                <ui:VisualElement class="menu-btn__left">
+                    <ui:Label class="menu-btn__title" text="EXIT" />
+                    <ui:Label class="menu-btn__sub" text="Close the game" />
+                </ui:VisualElement>
+                <ui:Label class="menu-btn__arrow" text="›" />
+            </ui:Button>
+
+            <ui:Label name="version-label" class="version-label" text="v0.1  DEMO" />
+
+        </ui:VisualElement>
+
+        <!-- ═══════════════ SETTINGS CARD ═══════════════ -->
+        <ui:VisualElement name="settings-card" class="menu-card settings-card hidden">
+            <ui:Label class="settings-title" text="SETTINGS" />
+            <ui:Label class="settings-subtitle" text="Audio and input preferences are saved automatically" />
+            <ui:VisualElement class="card-divider" />
+
+            <ui:VisualElement class="settings-tab-row">
+                <ui:Button name="settings-tab-audio" class="settings-tab settings-tab--active" text="AUDIO" />
+                <ui:Button name="settings-tab-camera" class="settings-tab" text="CAMERA" />
+                <ui:Button name="settings-tab-controls" class="settings-tab" text="CONTROLS" />
+            </ui:VisualElement>
+
+            <ui:ScrollView class="settings-content-scroll" mode="Vertical">
+            <ui:VisualElement name="settings-page-audio" class="settings-page settings-audio-panel">
+                <ui:Label class="settings-section-title" text="AUDIO" />
+                <ui:Label class="settings-field-label" text="MASTER VOLUME" />
+                <ui:VisualElement class="settings-slider-row">
+                    <ui:Slider name="master-volume" class="settings-slider" low-value="0" high-value="1" value="0.8" />
+                    <ui:Label name="master-volume-value" class="settings-value" text="80%" />
+                </ui:VisualElement>
+                <ui:Label class="settings-field-label settings-field-label--secondary" text="BACKGROUND MUSIC" />
+                <ui:VisualElement class="settings-slider-row">
+                    <ui:Slider name="music-volume" class="settings-slider" low-value="0" high-value="1" value="0.6" />
+                    <ui:Label name="music-volume-value" class="settings-value" text="60%" />
+                </ui:VisualElement>
+                <ui:Label class="settings-field-label settings-field-label--secondary" text="GAME SOUNDS" />
+                <ui:VisualElement class="settings-slider-row">
+                    <ui:Slider name="sound-volume" class="settings-slider" low-value="0" high-value="1" value="0.8" />
+                    <ui:Label name="sound-volume-value" class="settings-value" text="80%" />
+                </ui:VisualElement>
+                <ui:Label class="settings-note" text="Voice chat volume is independent from master volume." />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="settings-page-camera" class="settings-page settings-audio-panel hidden">
+                <ui:Label class="settings-section-title" text="CAMERA" />
+                <ui:Label class="settings-field-label" text="LOOK SENSITIVITY" />
+                <ui:VisualElement class="settings-slider-row">
+                    <ui:Slider name="look-sensitivity" class="settings-slider" low-value="0.25" high-value="2" value="1" />
+                    <ui:Label name="look-sensitivity-value" class="settings-value" text="1.00×" />
+                </ui:VisualElement>
+                <ui:Toggle name="invert-y" class="settings-toggle" label="Invert vertical look" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="settings-page-controls" class="settings-page hidden">
+                <ui:Label class="settings-section-title" text="CONTROLS" />
+                <ui:VisualElement name="controls-binding-host" class="controls-binding-host" />
+            </ui:VisualElement>
+            </ui:ScrollView>
+
+            <ui:Button name="btn-settings-back" class="lobby-back-btn" text="← MAIN MENU" />
+        </ui:VisualElement>
+
+        <!-- ═══════════════ LOBBY CARD ═══════════════ -->
+        <ui:VisualElement name="lobby-card" class="menu-card lobby-card hidden">
+
+            <!-- ── CONNECT VIEW ── -->
+            <ui:VisualElement name="view-connect">
+
+                <ui:VisualElement class="lobby-header">
+                    <ui:Label class="lobby-title" text="MULTIPLAYER" />
+                    <ui:Label class="lobby-sub" text="Co-op · 2–4 players · voice chat" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="card-divider" />
+
+                <!-- Name -->
+                <ui:Label class="lobby-field-label" text="YOUR NICKNAME" />
+                <ui:TextField name="input-name" class="lobby-input" max-length="24" />
+
+                <ui:VisualElement class="lobby-spacer" />
+
+                <!-- Create -->
+                <ui:Button name="btn-create" class="menu-btn menu-btn--primary">
+                    <ui:VisualElement class="menu-btn__left">
+                        <ui:Label class="menu-btn__title" text="CREATE ROOM" />
+                        <ui:Label class="menu-btn__sub" text="Become host and invite friends" />
+                    </ui:VisualElement>
+                    <ui:Label class="menu-btn__arrow" text="›" />
+                </ui:Button>
+
+                <!-- Join row -->
+                <ui:VisualElement class="lobby-join-section">
+                    <ui:Label class="lobby-field-label" text="JOIN BY ROOM CODE" />
+                    <ui:VisualElement class="lobby-join-row">
+                        <ui:TextField name="input-code" class="lobby-input lobby-code-input" max-length="10" />
+                        <ui:Button name="btn-join" class="lobby-join-btn" text="JOIN" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:Label name="lobby-error" class="lobby-error hidden" text="" />
+
+                <ui:Button name="btn-back" class="lobby-back-btn" text="← MAIN MENU" />
+
+            </ui:VisualElement>
+
+            <!-- ── ROOM VIEW ── -->
+            <ui:VisualElement name="view-room" class="hidden">
+
+                <!-- Code bar -->
+                <ui:VisualElement class="lobby-code-bar">
+                    <ui:VisualElement class="lobby-code-indicator" />
+                    <ui:Label class="lobby-code-label" text="ROOM CODE" />
+                    <ui:Label name="code-display" class="lobby-code-value" text="——" />
+                    <ui:Button name="btn-copy-code" class="lobby-copy-btn" tooltip="Copy room code" text="COPY" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="card-divider" />
+
+                <!-- Players -->
+                <ui:VisualElement class="lobby-section-header">
+                    <ui:Label class="lobby-section-title" text="PLAYERS" />
+                    <ui:Label name="player-count" class="lobby-player-count" text="1 / 4" />
+                </ui:VisualElement>
+                <ui:VisualElement name="player-list" class="lobby-player-list" />
+                <ui:Label name="team-bonus" class="lobby-team-bonus" text="ROLE DIVERSITY BONUS  +0%" />
+
+                <ui:VisualElement class="card-divider" />
+
+                <!-- Role selection -->
+                <ui:Label class="lobby-section-title" text="MY ROLE" />
+                <ui:VisualElement class="lobby-role-grid">
+                    <ui:Button name="role-btn-0" class="role-btn" text="PICKER" />
+                    <ui:Button name="role-btn-1" class="role-btn" text="ASSEMBLER" />
+                    <ui:Button name="role-btn-2" class="role-btn" text="DISPATCHER" />
+                    <ui:Button name="role-btn-3" class="role-btn" text="FORKLIFT" />
+                </ui:VisualElement>
+                <ui:VisualElement name="role-perk-panel" class="role-perk-panel">
+                    <ui:VisualElement class="role-perk-header">
+                        <ui:Label class="role-perk-kicker" text="ROLE PERKS" />
+                        <ui:Label name="role-perk-name" class="role-perk-name" text="PICKER" />
+                    </ui:VisualElement>
+                    <ui:Label name="role-perk-summary" class="role-perk-summary" text="" />
+                    <ui:Label name="role-perk-0" class="role-perk-item" text="" />
+                    <ui:Label name="role-perk-1" class="role-perk-item" text="" />
+                    <ui:Label name="role-perk-2" class="role-perk-item" text="" />
+                </ui:VisualElement>
+                <ui:Label name="role-hint" class="lobby-role-hint" text="" />
+
+                <ui:Label name="lobby-status" class="lobby-status-text" text="Waiting for players..." />
+
+                <!-- Ready confirm -->
+                <ui:Button name="btn-ready" class="menu-btn menu-btn--ready" text="READY" />
+                <ui:Label name="ready-hint" class="lobby-status-text hidden" text="" />
+
+                <!-- Actions -->
+                <ui:Button name="btn-start" class="menu-btn menu-btn--start hidden">
+                    <ui:VisualElement class="menu-btn__left">
+                        <ui:Label class="menu-btn__title" text="START GAME" />
+                        <ui:Label class="menu-btn__sub" text="All players will join at once" />
+                    </ui:VisualElement>
+                    <ui:Label class="menu-btn__arrow" text="▶" />
+                </ui:Button>
+
+                <ui:Button name="btn-leave" class="lobby-back-btn" text="← LEAVE ROOM" />
+
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

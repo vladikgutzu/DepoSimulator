@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6ab306d3404124788b4e0f5648b0e8, type: 3}
+  m_Name: weapon_pipewrench
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeWeaponDefinition
+  Kind: 5
+  DisplayName: Pipe Wrench
+  PickupHint: "Left click to swing \u2014 heavy in one hand, two hits"
+  Damage: 2
+  Reach: 1.9
+  HalfAngle: 50
+  Cooldown: 0.75
+  Windup: 0.32
+  Trauma: 0.28
+  Grip: 1
+  OffHandGrip: {x: 0, y: 0, z: 0}
+  HandOffset: {x: 0.064, y: 0.055, z: 0.06}
+  HandRotation: {x: 14.46816, y: 174.43808, z: 18.64424}
+  CarryOffset: {x: 0, y: 0, z: 0}
+  CarryRotation: {x: 48.024242, y: 6.929795, z: 6.457375}
+  Prefab: {fileID: 6622960106708971140, guid: eeaf89b47bd206a4baf6ac9394c8c29e, type: 3}

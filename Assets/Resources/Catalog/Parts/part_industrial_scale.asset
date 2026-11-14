@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_industrial_scale
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Scale Platform
+  PartID: industrial_scale_platform
+  Description: Reinforced weighing platform.
+  VisualPrefab: {fileID: 1940598017684519052, guid: 9fb8c2e150ad80e48af9dab32701b82b, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.25, g: 0.34, b: 0.38, a: 1}
+  IsHeavy: 1
+  GhostChildPaths:
+  - $none

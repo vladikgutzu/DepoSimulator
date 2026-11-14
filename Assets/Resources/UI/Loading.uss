@@ -1,0 +1,124 @@
+/* ═══════════════════════════════════════════════════
+   LOADING overlay — same palette as MainMenu.uss
+
+   The rules below are the full screen, which is what every in-game load uses: heading, wide bar
+   and a tip to read. The `--splash` block at the bottom is the startup variant — big logo, no
+   chrome — and only overrides what differs.
+   ═══════════════════════════════════════════════════ */
+
+.loading-root {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    -unity-font-definition: url("/Assets/Fonts/ZillaSlab-Regular.ttf");
+    background-color: rgb(12, 12, 14);
+}
+
+.loading-center {
+    align-items: center;
+    justify-content: center;
+    width: 520px;
+}
+
+/* ── logo ── */
+.logo-block {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+
+.brand-logo {
+    width: 360px;
+    height: 200px;
+    background-image: url("project://database/Assets/Resources/UI/Brand/ShiftHappensTogetherLogo.png");
+    -unity-background-scale-mode: scale-to-fit;
+    flex-shrink: 0;
+}
+
+/* ── heading ── */
+.loading-title {
+    font-size: 13px;
+    color: rgb(170, 170, 170);
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    margin-bottom: 12px;
+}
+
+/* ── progress ── */
+.bar-track {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(48, 48, 52, 0.9);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0;
+    background-color: rgb(245, 166, 35);
+    border-radius: 2px;
+}
+
+/* ── status ── */
+.loading-status {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    margin-top: 14px;
+    height: 20px;
+    -unity-text-align: middle-center;
+}
+
+/* ── tip ── */
+.tip-block {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.tip-label {
+    font-size: 11px;
+    color: rgb(245, 166, 35);
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    margin-bottom: 6px;
+}
+
+.tip-text {
+    font-size: 15px;
+    color: rgb(150, 150, 150);
+    max-width: 640px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+/* ═══════════════════════════════════════════════════
+   SPLASH — the one the game opens with.
+
+   The game's face rather than a panel: a large icon, the wordmark, a thin bar and one line saying
+   what it is doing. The heading and the chrome go; the tip stays.
+
+   The tip used to go with them, on the reasoning that nothing has happened yet and there is nothing
+   to read. That is true of the player's situation and false of his attention — this is the longest
+   uninterrupted look he gives the screen all session, and the tips are rules the game cannot show
+   by being looked at. It costs nothing to keep: the block is absolutely positioned at the bottom,
+   so it never moves the centred logo by a pixel.
+   ═══════════════════════════════════════════════════ */
+
+.loading-root--splash .brand-logo {
+    width: 480px;
+    height: 267px;
+}
+
+.loading-root--splash .loading-title {
+    display: none;
+}
+
+.loading-root--splash .bar-track {
+    width: 280px;
+    height: 3px;
+}

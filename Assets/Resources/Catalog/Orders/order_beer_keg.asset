@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_beer_keg
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  IsEnabled: 1
+  OrderName: Beer Keg
+  ClientName: Dockside Brewery
+  Description: A sealed industrial beer keg.
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: 66e5df5c163d95d45a5891464a632a15, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: 78e56cd38081859489d0e259a096cef8, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 0a58cdfb84ff04543b3a7a3a53f9356e, type: 2}
+    Count: 1
+    AssemblyStage: 2
+  Reward: 200
+  TimeLimitSeconds: 300
+  SharedGhostPrefab: {fileID: 6800447549410667488, guid: 8091f2eb376a2eb468a223495635b3f1, type: 3}

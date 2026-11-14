@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_warehouse_tablet
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  IsEnabled: 1
+  OrderName: Warehouse Tablet
+  ClientName: FieldOps
+  Description: A rugged tablet for warehouse operations.
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: cfb4551050a8fe94b85f5b9ca8dac39f, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: 8a92d120100b5364294e2685359052f3, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: ec504a4391241194e8fbcbff5207d396, type: 2}
+    Count: 1
+    AssemblyStage: 2
+  Reward: 180
+  TimeLimitSeconds: 300
+  SharedGhostPrefab: {fileID: 7558777640940470514, guid: 5ecdec7cdc8f30b4d9695e91b909bc1e, type: 3}

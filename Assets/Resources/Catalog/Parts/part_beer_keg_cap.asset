@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_beer_keg_cap
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Keg Protective Cap
+  PartID: beer_keg_cap
+  Description: Protective cap for the keg valve.
+  VisualPrefab: {fileID: 6467424885867025565, guid: d7c63a56d82816f44bb8c4d97dac9993, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.92, g: 0.82, b: 0.18, a: 1}
+  IsHeavy: 0
+  GhostChildPaths:
+  - $all

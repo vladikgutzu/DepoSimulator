@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_moto_arms
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  OrderName: AGV Manipulator
+  ClientName: HeavyLoad Corp
+  Description: 
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: 76ac809e248890046ad7e9e5678c836d, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: 87f15e90023931141ada6f56d2fd8976, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: 85d33956c72ffb34aa59c328d23da0c2, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 888b4eb09c0100741851415ebc81fdcf, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 3458077cee1c68543ae8c64fc9abaf80, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 4bffe1b06a893be4084163e0fc53acdc, type: 2}
+    Count: 1
+    AssemblyStage: 2
+  - Part: {fileID: 11400000, guid: 87fea46eb7a934c47994edee9e92e437, type: 2}
+    Count: 1
+    AssemblyStage: 2
+  Reward: 400
+  TimeLimitSeconds: 0

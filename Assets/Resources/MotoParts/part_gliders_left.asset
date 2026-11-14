@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_gliders_left
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Left Glider
+  PartID: gliders_left
+  Description: 
+  VisualPrefab: {fileID: 4568503450517836279, guid: 8b612f6027d35724fa4ab6d983a21bf0, type: 3}
+  GhostPrefab: {fileID: 8807804276367738575, guid: 993e4d2b864852e45acbbdbf91fab6d8, type: 3}
+  DebugColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  IsHeavy: 0

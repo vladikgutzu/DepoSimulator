@@ -1,0 +1,2 @@
+*.exr filter=lfs diff=lfs merge=lfs -text
+Assets/Textures/concrete/concreteOld/smoothed_cast_concrete_normal.png filter=lfs diff=lfs merge=lfs -text

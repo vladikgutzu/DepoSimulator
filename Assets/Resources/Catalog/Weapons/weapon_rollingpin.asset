@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6ab306d3404124788b4e0f5648b0e8, type: 3}
+  m_Name: weapon_rollingpin
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeWeaponDefinition
+  Kind: 7
+  DisplayName: Rolling Pin
+  PickupHint: "Left click to swing \u2014 quick and one-handed, but three hits"
+  Damage: 1
+  Reach: 1.6
+  HalfAngle: 55
+  Cooldown: 0.38
+  Windup: 0.12
+  Trauma: 0.12
+  MaxTargets: 1
+  Grip: 1
+  OffHandGrip: {x: 0, y: 0, z: 0}
+  HandOffset: {x: 0.0876, y: 0.2586, z: -0.1433}
+  HandRotation: {x: 58.05089, y: 83.33633, z: 307.05438}
+  CarryOffset: {x: 0, y: 0, z: 0}
+  CarryRotation: {x: 54.43683, y: 7.720507, z: 7.2782726}
+  Prefab: {fileID: 7365752904326082590, guid: 4fa7caf2c89167a42878487ff222b71a, type: 3}

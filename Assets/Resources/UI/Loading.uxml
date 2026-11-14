@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Two looks, one layout. Code adds a splash modifier class to this root at startup, which
+         enlarges the logo and takes away the heading, the tip and most of the bar; every other
+         load leaves it off and gets the full screen. One modifier class means one UXML, one
+         stylesheet and one code path, and nothing that can drift apart. -->
+    <ui:VisualElement name="loading-root" class="loading-root">
+        <Style src="Loading.uss" />
+
+        <ui:VisualElement class="loading-center">
+
+            <!-- Logo, same block the main menu opens with -->
+            <ui:VisualElement class="logo-block">
+                <ui:VisualElement class="brand-logo" />
+            </ui:VisualElement>
+
+            <ui:Label name="loading-title" class="loading-title" text="LOADING" />
+
+            <!-- Progress. The fill is driven from code; the sweep takes over when there is no
+                 real number to show. -->
+            <ui:VisualElement class="bar-track">
+                <ui:VisualElement name="bar-fill" class="bar-fill" />
+            </ui:VisualElement>
+
+            <ui:Label name="loading-status" class="loading-status" text="" />
+
+        </ui:VisualElement>
+
+        <!-- Tip sits at the bottom so it never shifts the centred block around -->
+        <ui:VisualElement name="tip-block" class="tip-block">
+            <ui:Label class="tip-label" text="TIP" />
+            <ui:Label name="loading-tip" class="tip-text" text="" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

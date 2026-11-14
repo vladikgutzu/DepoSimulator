@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_cooler_fridge
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: "Fridge Cooler"
+  PartID: cooler_fridge
+  Description: 
+  VisualPrefab: {fileID: 6845392205692157472, guid: 72f036039b4e5cb45b802687cc2caf1b, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.2, g: 0.8, b: 0.9, a: 1}
+  IsHeavy: 0
+  GhostChildPaths: []

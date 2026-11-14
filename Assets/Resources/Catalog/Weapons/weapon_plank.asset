@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6ab306d3404124788b4e0f5648b0e8, type: 3}
+  m_Name: weapon_plank
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeWeaponDefinition
+  Kind: 6
+  DisplayName: Plank
+  PickupHint: "Left click to sweep \u2014 the longest reach, and it catches everyone
+    in front of you"
+  Damage: 1
+  Reach: 2.8
+  HalfAngle: 70
+  Cooldown: 0.7
+  Windup: 0.3
+  Trauma: 0.18
+  MaxTargets: 6
+  Grip: 2
+  OffHandGrip: {x: 0, y: 0, z: 0.35}
+  HandOffset: {x: -0.153, y: 0.071, z: 0.037}
+  HandRotation: {x: 2.1783807, y: 161.10483, z: 7.130278}
+  CarryOffset: {x: 0, y: 0, z: 0}
+  CarryRotation: {x: 40.01695, y: 18.772852, z: 17.25005}
+  Prefab: {fileID: 2369263452238797859, guid: 0ad86ed507d29ed4084c32e7d20040d1, type: 3}

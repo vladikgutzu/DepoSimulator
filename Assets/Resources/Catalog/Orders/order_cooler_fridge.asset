@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_cooler_fridge
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  OrderName: "Fridge Cooler"
+  ClientName: FreshMart
+  Description: 
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: f4c272180c7f489c8b9187b914d37295, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  Reward: 130
+  TimeLimitSeconds: 180
+  SharedGhostPrefab: {fileID: 6845392205692157472, guid: 72f036039b4e5cb45b802687cc2caf1b, type: 3}

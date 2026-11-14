@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_cable_drum_spool
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Industrial Cable Spool
+  PartID: cable_drum_spool
+  Description: Coiled industrial power cable.
+  VisualPrefab: {fileID: 3077313331226236745, guid: d0bcf759b426ca24bb6867f5b23001e4, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.1, g: 0.12, b: 0.14, a: 1}
+  IsHeavy: 1
+  GhostChildPaths:
+  - $none

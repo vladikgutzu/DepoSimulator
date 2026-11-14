@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c369ff9716a4449fe1a7022bd831d, type: 3}
+  m_Name: order_tool_set
+  m_EditorClassIdentifier: Assembly-CSharp::OrderDefinition
+  IsEnabled: 1
+  OrderName: Tool Set
+  ClientName: Workshop Supply
+  Description: A complete warehouse maintenance tool set.
+  RequiredParts:
+  - Part: {fileID: 11400000, guid: 5200e82df2fb9594eb7bf9608001a2a0, type: 2}
+    Count: 1
+    AssemblyStage: 0
+  - Part: {fileID: 11400000, guid: 63c613b537170b1408ce9c77363b45e1, type: 2}
+    Count: 1
+    AssemblyStage: 1
+  - Part: {fileID: 11400000, guid: 96ec20f6de967ac439527e2b7dc23816, type: 2}
+    Count: 1
+    AssemblyStage: 2
+  Reward: 175
+  TimeLimitSeconds: 300
+  SharedGhostPrefab: {fileID: 8651091565800976704, guid: 2f82c64dd6b8f244c852617079064c49, type: 3}

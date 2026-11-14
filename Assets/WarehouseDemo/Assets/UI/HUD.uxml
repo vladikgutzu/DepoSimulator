@@ -1,0 +1,299 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="hud-root" class="hud-root">
+        <Style src="HUD.uss" />
+
+        <!-- ════ TOP BAR ════ -->
+        <ui:VisualElement name="top-bar" class="top-bar">
+
+            <ui:VisualElement class="logo-group">
+                <ui:VisualElement class="brand-logo brand-logo--hud" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="top-sep" />
+
+            <ui:VisualElement name="battery-stat" class="stat-group battery-stat">
+                <ui:VisualElement class="stat-texts">
+                    <ui:Label name="battery-percent" class="stat-value" text="100%" />
+                    <ui:Label class="stat-label" text="BATTERY" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="top-sep" />
+
+            <ui:VisualElement class="stat-group">
+                <ui:VisualElement class="stat-texts">
+                    <ui:Label name="time-value" class="stat-value" text="00:00" />
+                    <ui:Label name="shift-label" class="stat-label" text="SHIFT 1" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="top-sep" />
+
+            <ui:VisualElement class="stat-group">
+                <ui:VisualElement class="stat-texts">
+                    <ui:Label name="orders-value" class="stat-value" text="0" />
+                    <ui:Label class="stat-label" text="ORDERS" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="top-sep" />
+
+            <ui:VisualElement class="stat-group">
+                <ui:VisualElement class="stat-texts">
+                    <ui:Label name="budget-value" class="stat-value" text="$0" />
+                    <ui:Label class="stat-label" text="BUDGET" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="top-sep" />
+
+            <ui:VisualElement class="stat-group">
+                <ui:VisualElement class="stat-texts">
+                    <ui:Label name="rep-value" class="stat-value" text="100%" />
+                    <ui:Label class="stat-label" text="REPUTATION" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="top-spacer" />
+
+            <ui:Label name="fps-counter" class="fps-counter" text="FPS --" />
+
+        </ui:VisualElement>
+
+        <!-- ════ BODY ════ -->
+        <ui:VisualElement name="hud-body" class="hud-body">
+
+            <!-- LEFT COLUMN -->
+            <ui:VisualElement name="left-col" class="side-col left-col">
+
+                <!-- Task Panel -->
+                <ui:VisualElement name="task-panel" class="hud-panel task-panel">
+                    <ui:VisualElement class="panel-header">
+                        <ui:VisualElement class="panel-accent-bar" />
+                        <ui:Label class="panel-title" text="CURRENT TASK" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel-body">
+                        <ui:VisualElement name="active-task-box" class="active-task-box">
+                            <ui:Label name="active-task-text" class="active-task-text" text="Take an order from the board" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="order-timer-track" class="order-timer-block hidden">
+                            <ui:Label class="order-timer-label" text="ORDER TIME" />
+                            <ui:VisualElement class="order-timer-track">
+                                <ui:VisualElement name="order-timer-fill" class="order-timer-fill" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="event-timer-block" class="event-timer-block hidden">
+                            <ui:VisualElement class="event-timer-header">
+                                <ui:Label name="event-timer-title" class="event-timer-title" text="RUSH ORDER" />
+                                <ui:Label name="event-timer-value" class="event-timer-value" text="02:00" />
+                            </ui:VisualElement>
+                            <ui:VisualElement class="event-timer-track">
+                                <ui:VisualElement name="event-timer-fill" class="event-timer-fill" />
+                            </ui:VisualElement>
+                            <ui:Label name="event-timer-detail" class="event-timer-detail" text="" />
+                        </ui:VisualElement>
+                        <ui:Label name="task-hint" class="task-hint" text="" />
+                        <ui:VisualElement class="hud-sep" />
+                        <ui:VisualElement name="task-list" class="task-list" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
+            <!-- CENTER COLUMN -->
+            <ui:VisualElement name="center-col" class="center-col">
+
+                <ui:VisualElement class="prompt-wrapper">
+                    <ui:VisualElement name="interaction-prompt" class="interaction-prompt hidden">
+                        <ui:Label name="prompt-text" class="prompt-text" text="" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="reward-toast" class="reward-toast hidden">
+                    <ui:Label name="reward-toast-title" class="reward-toast-title" text="PERFECT ORDER" />
+                    <ui:Label name="reward-toast-detail" class="reward-toast-detail" text="+$0" />
+                </ui:VisualElement>
+
+                <!-- Tutorial Panel -->
+                <ui:VisualElement name="tutorial-banner" class="tutorial-banner hidden">
+
+                    <ui:VisualElement class="tut-header">
+                        <ui:Label name="tutorial-step-num" class="tutorial-step-num" text="STEP 1 / 13" />
+                        <ui:Label name="tutorial-title" class="tutorial-title" text="" />
+                    </ui:VisualElement>
+
+                    <ui:ScrollView name="tutorial-body-scroll" class="tutorial-body-scroll">
+                        <ui:Label name="tutorial-text" class="tutorial-text" text="" />
+                    </ui:ScrollView>
+
+                    <ui:VisualElement name="tutorial-key-row" class="tutorial-key-row hidden">
+                        <ui:Label class="tutorial-key-label" text="PRESS:" />
+                        <ui:VisualElement name="tutorial-key-box" class="tutorial-key-box">
+                            <ui:Label name="tutorial-key" class="tutorial-key" text="E" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="tutorial-checklist" class="tutorial-checklist hidden" />
+
+                    <ui:VisualElement class="tut-footer">
+                        <ui:Button name="tutorial-next-btn" class="tutorial-next-btn hidden">
+                            <ui:Label class="tutorial-next-label" text="CONTINUE —" />
+                            <ui:Label class="tutorial-keyboard-button" text="ENTER" />
+                            <ui:Label class="tutorial-input-separator" text="/" />
+                            <ui:Label class="tutorial-gamepad-button" text="A" />
+                        </ui:Button>
+                    </ui:VisualElement>
+
+                </ui:VisualElement>
+
+                <ui:VisualElement class="center-spacer" />
+
+                <ui:VisualElement name="controls-hint" class="controls-hint hidden">
+                    <ui:Label name="controls-hint-text" class="controls-hint-text" text="" />
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
+            <!-- RIGHT COLUMN -->
+            <ui:VisualElement name="right-col" class="side-col right-col">
+
+                <!-- Notifications Panel -->
+                <ui:VisualElement name="notif-panel" class="hud-panel notif-panel">
+                    <ui:VisualElement class="panel-header">
+                        <ui:VisualElement class="panel-accent-bar" />
+                        <ui:Label class="panel-title" text="NOTIFICATIONS" />
+                        <ui:VisualElement class="top-spacer" />
+                        <ui:Button name="notif-toggle-btn" class="toggle-btn" text="Hide" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="notif-content" class="panel-body notif-list" />
+                </ui:VisualElement>
+
+                <!-- Status Panel (vehicle info — shown only when in vehicle) -->
+                <ui:VisualElement name="status-panel" class="hud-panel status-panel hidden">
+                    <ui:VisualElement class="panel-header">
+                        <ui:VisualElement class="panel-accent-bar" />
+                        <ui:Label class="panel-title" text="STATUS" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel-body status-body">
+                        <ui:VisualElement class="status-vehicle-row">
+                            <ui:VisualElement class="action-icon action-icon--forklift" />
+                            <ui:Label name="vehicle-name" class="vehicle-name" text="—" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="status-row">
+                            <ui:Label class="status-row-label" text="FUEL" />
+                            <ui:Label name="fuel-pct" class="status-row-value" text="—" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="progress-track">
+                            <ui:VisualElement name="fuel-fill" class="progress-fill fuel-fill" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="status-row">
+                            <ui:Label class="status-row-label" text="FORK HEIGHT" />
+                            <ui:Label name="fork-height" class="status-row-value" text="—" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+
+        <!-- ════ MINIMAP (pinned to bottom-right corner) ════ -->
+        <ui:VisualElement name="minimap-panel" class="hud-panel minimap-panel">
+            <ui:VisualElement class="panel-header">
+                <ui:VisualElement class="panel-accent-bar" />
+                <ui:Label class="panel-title" text="WAREHOUSE MAP" />
+            </ui:VisualElement>
+            <ui:VisualElement name="minimap-view" class="minimap-view" />
+        </ui:VisualElement>
+
+        <!-- ════ RADIO HUD PANEL (persistent, bottom-left) ════ -->
+        <ui:VisualElement name="radio-hud-panel" class="hud-panel radio-hud-panel" picking-mode="Ignore">
+            <ui:VisualElement class="panel-header">
+                <ui:VisualElement class="panel-accent-bar" />
+                <ui:VisualElement class="radio-hud-dot" />
+                <ui:Label class="panel-title" text="RADIO" />
+                <ui:VisualElement class="top-spacer" />
+                <ui:Label name="radio-hud-channel" class="stat-label" text="Channel 1" />
+            </ui:VisualElement>
+            <ui:VisualElement name="radio-hud-log" class="radio-hud-log" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <!-- ════ CROSSHAIR ════ -->
+        <ui:VisualElement name="crosshair-layer" class="crosshair-layer" picking-mode="Ignore">
+            <ui:VisualElement name="action-progress" class="action-progress hidden" picking-mode="Ignore">
+                <ui:Label name="action-progress-label" class="action-progress-label" text="ACTION PROGRESS" picking-mode="Ignore" />
+                <ui:VisualElement class="progress-track action-progress-track" picking-mode="Ignore">
+                    <ui:VisualElement name="action-progress-fill" class="progress-fill action-progress-fill" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ════ OVERLAY: MENU ════ -->
+        <ui:VisualElement name="overlay-menu" class="overlay-panel hidden">
+            <ui:VisualElement name="overlay-menu-box" class="overlay-box overlay-box--sm">
+                <ui:VisualElement class="panel-header">
+                    <ui:VisualElement class="panel-accent-bar" />
+                    <ui:Label class="panel-title" text="MENU" />
+                    <ui:VisualElement class="top-spacer" />
+                    <ui:Button name="close-menu" class="overlay-close" text="×" />
+                </ui:VisualElement>
+                <ui:VisualElement name="menu-content" class="overlay-body" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ════ OVERLAY: ORDER BOARD / SHOP ════ -->
+        <ui:VisualElement name="overlay-orderboard" class="overlay-panel hidden">
+            <ui:VisualElement name="overlay-orderboard-box" class="overlay-box overlay-box--md">
+                <ui:VisualElement class="panel-header">
+                    <ui:VisualElement class="panel-accent-bar" />
+                    <ui:Label class="panel-title" text="ORDER BOARD" />
+                    <ui:VisualElement class="top-spacer" />
+                    <ui:Button name="close-orderboard" class="overlay-close" text="×" />
+                </ui:VisualElement>
+                <ui:VisualElement name="orderboard-tabs" class="ob-tab-row">
+                    <ui:Button name="tab-orders" class="ob-tab-btn ob-tab-btn--active" text="ORDERS" />
+                    <ui:Button name="tab-shop" class="ob-tab-btn" text="SHOP" />
+                </ui:VisualElement>
+                <ui:VisualElement name="shop-category-tabs" class="shop-category-row hidden">
+                    <ui:Button name="shop-cat-vehicles" class="shop-category-btn shop-category-btn--active" text="VEHICLES" />
+                    <ui:Button name="shop-cat-equipment" class="shop-category-btn" text="EQUIPMENT" />
+                    <ui:Button name="shop-cat-supplies" class="shop-category-btn" text="SUPPLIES" />
+                    <ui:Button name="shop-cat-services" class="shop-category-btn" text="SERVICES" />
+                </ui:VisualElement>
+                <ui:ScrollView name="orderboard-content" class="overlay-body overlay-body--scroll" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" />
+                <ui:ScrollView name="shop-content" class="overlay-body overlay-body--scroll hidden" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ════ OVERLAY: ROBOT CHARGING ════ -->
+        <ui:VisualElement name="charging-selection" class="charging-overlay" style="display: none;">
+            <ui:VisualElement class="charging-card">
+                <ui:VisualElement class="panel-header charging-header">
+                    <ui:VisualElement class="panel-accent-bar" />
+                    <ui:Label class="panel-title" text="ROBOT CHARGING STATION" />
+                </ui:VisualElement>
+                <ui:VisualElement class="charging-body">
+                    <ui:Label name="charging-selection-battery" class="charging-battery-value" text="BATTERY 100%" />
+                    <ui:Label name="charging-selection-hint" class="charging-selection-hint" text="Choose a charging mode." />
+                    <ui:Button name="charging-slow" class="charging-mode-button" text="SLOW CHARGE" />
+                    <ui:Label name="charging-slow-detail" class="charging-mode-detail" text="" />
+                    <ui:Button name="charging-fast" class="charging-mode-button charging-mode-button--fast" text="FAST CHARGE" />
+                    <ui:Label name="charging-fast-detail" class="charging-mode-detail" text="" />
+                    <ui:Button name="charging-cancel" class="charging-cancel" text="CANCEL" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="charging-active" class="charging-active" style="display: none;">
+            <ui:Label name="charging-active-title" text="CHARGING" />
+            <ui:Label name="charging-active-percent" class="charging-active-percent" text="0%" />
+            <ui:Label name="charging-active-mode" text="SLOW CHARGE" />
+            <ui:Label name="charging-active-cost" text="SPENT $0" />
+            <ui:Label name="charging-active-hint" text="E — DISCONNECT" />
+        </ui:VisualElement>
+
+        <ui:Label name="low-battery-alert" class="low-battery-alert hidden" text="LOW BATTERY!" />
+
+    </ui:VisualElement>
+</ui:UXML>

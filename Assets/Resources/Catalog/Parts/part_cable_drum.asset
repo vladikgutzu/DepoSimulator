@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_cable_drum
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Cable Drum Core
+  PartID: cable_drum_core
+  Description: Load-bearing drum core.
+  VisualPrefab: {fileID: 7581492409636274513, guid: 3618294e437b0cb49b88c01d90a1d700, type: 3}
+  GhostPrefab: {fileID: 0}
+  DebugColor: {r: 0.46, g: 0.3, b: 0.16, a: 1}
+  IsHeavy: 1
+  GhostChildPaths:
+  - $none

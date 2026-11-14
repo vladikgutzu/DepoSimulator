@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_chassis_support
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Chassis Support
+  PartID: chassis_support
+  Description: 
+  VisualPrefab: {fileID: 405646609814987570, guid: 1f78a9cb62cd53a4d924844a00a68d9d, type: 3}
+  GhostPrefab: {fileID: 4212879195341477036, guid: ec7a5601b3c692e4eabec6a13cb69d4f, type: 3}
+  DebugColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  IsHeavy: 0

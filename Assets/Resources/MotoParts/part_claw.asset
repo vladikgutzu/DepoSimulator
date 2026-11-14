@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fcca806cbd84c46b90af5b5fdf09c5, type: 3}
+  m_Name: part_claw
+  m_EditorClassIdentifier: Assembly-CSharp::PartDefinition
+  PartName: Gripper
+  PartID: claw
+  Description: 
+  VisualPrefab: {fileID: 7624448211058901286, guid: afe0ab7a23f2a804b83157d850fb077c, type: 3}
+  GhostPrefab: {fileID: 38721507115369500, guid: 67e9f47b6882a4c44bfdd5f2ad96dffc, type: 3}
+  DebugColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  IsHeavy: 0
