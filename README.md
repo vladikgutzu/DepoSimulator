@@ -6,6 +6,8 @@ Portfolio source snapshot for a cooperative warehouse game built with Unity.
 
 [Shift Happens: Together on Steam](https://store.steampowered.com/app/5173620/Shift_Happens_Together/)
 
+Подробный стек и архитектурные решения: [TECHNOLOGIES.md](TECHNOLOGIES.md).
+
 ## Highlights
 
 - Cooperative networking, lobby flow, player synchronization, and role-based tasks.
